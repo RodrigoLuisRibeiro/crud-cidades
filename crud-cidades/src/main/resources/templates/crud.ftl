@@ -39,12 +39,12 @@
 			<tbody>
 				</#LIST listaCidades as cidade>
 				<tr>
-					<td>${(cidade.nome)!}</td>
-					<td>${(cidade.estado)!}</td>
+					<td>${cidade.nome}</td>
+					<td>${cidade.estado}</td>
 					<td>
 						<div class="d-flex d-justify-content-center">
 							<a href="" class="btn btn-warning mr-3">ALTERAR</a>
-							<a href="" class="btn btn-danger mr-3">EXCLUIR</a>
+							<a href="/excluir?nome=${cidade.nome}&estado=${cidade.estado}" class="btn btn-danger mr-3">EXCLUIR</a>
 						</div>
 					</td>
 				</tr>
