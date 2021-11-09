@@ -38,10 +38,6 @@ public class CidadeController {
 					   memoria.addAttribute(
 							error.getField(), 
 							error.getDefaultMessage()));
-			
-			memoria.addAttribute("listaCidades", cidades);
-			
-			return ("/crud");
 		} else {
 			cidades.add(cidade);
 		}

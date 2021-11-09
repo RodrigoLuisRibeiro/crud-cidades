@@ -35,13 +35,9 @@ public class CidadeController {
 		if (validacao.hasErrors()) {
 			validacao.getFieldErrors()
 					.forEach(error -> 
-					   memoria.addAttribute(
+					   System.out.println(String.format("O atributo %s emitiu a seguinte mensagem %s",
 							error.getField(), 
-							error.getDefaultMessage()));
-			
-			memoria.addAttribute("listaCidades", cidades);
-			
-			return ("/crud");
+							error.getDefaultMessage())));
 		} else {
 			cidades.add(cidade);
 		}
