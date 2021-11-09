@@ -14,22 +14,22 @@ public class CrudCidadesApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(CrudCidadesApplication.class, args);
 	}
-	
+
 	@Bean
 	public MessageSource messageSource() {
-		ReloadableResourceBundleMessageSource messageSource 
+		ReloadableResourceBundleMessageSource messageSource
 		= new ReloadableResourceBundleMessageSource();
 		messageSource.setBasename("classpath:messages");
 		messageSource.setDefaultEncoding("UTF-8");
-		
+
 		return messageSource;
 	}
-	
+
 	@Bean
 	public Validator getValidator() {
 		LocalValidatorFactoryBean bean = new LocalValidatorFactoryBean();
 		bean.setValidationMessageSource(messageSource());
-		
-		return bean;	
+
+		return bean;
 	}
 }
