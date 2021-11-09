@@ -1,0 +1,5 @@
+package com.edu.utfpr.cp.espjava.crudcidades.visao;
+
+public class CidadeEntidade {
+
+}
