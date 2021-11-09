@@ -3,7 +3,9 @@ package com.edu.utfpr.cp.espjava.crudcidades.visao;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
+
 import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -41,11 +43,11 @@ public class CidadeController {
 	public String criar(@Valid Cidade cidade, BindingResult validacao/*, Model memoria*/) {
 
 		if (validacao.hasErrors()) {
-//			validacao.getFieldErrors()
-//					.forEach(error ->
-//					   memoria.addAttribute(
-//							error.getField(),
-//							error.getDefaultMessage()));
+			validacao.getFieldErrors()
+					.forEach(error ->
+					   memoria.addAttribute(
+							error.getField(),
+							error.getDefaultMessage()));
 
 			//memoria.addAttribute("nomeInformado", cidade.getNome());
 			//memoria.addAttribute("estadoInformado", cidade.getEstado());
