@@ -16,7 +16,6 @@
 			<h1> GERENCIAMENTO DE CIDADES</h1>
 			<p> Um crud para criar, alterar, excluir e listar cidades</p>
 		</div>
-		<form action="/criar" method="POST">
 
 			<#if cidadeAtual??>
 				<form action="/alterar" method="POST" class="needs-validation" novalidate>
@@ -27,7 +26,7 @@
 			</#if>
 
 			<div class="form-group">
-				<label for="nome">Cidade</label>
+				<label for="nome">Cidade:</label>
 				<input 
 				value="${(cidadeAtual.nome)!}${nomeInformado!}" 
 				name="nome" 
@@ -65,9 +64,9 @@
 		<table class="table table-striped table-hover mt-5">
 			<thead class="thead-dark">
 				<tr>
-					<td>Nome</td>
-					<td>Estado</td>
-					<td>Ações</td>
+					<th>Nome</th>
+					<th>Estado</th>
+					<th>Ações</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -78,7 +77,7 @@
 						<td>
 							<div class="d-flex d-justify-content-center">
 								<a href="/preparaAlterar?nome=${cidade.nome}&estado=${cidade.estado}" class="btn btn-warning mr-3">ALTERAR</a>
-								<a href="/excluir?nome=${cidade.nome}&estado=${cidade.estado}" class="btn btn-danger mr-3">EXCLUIR</a>
+								<a href="/excluir?nome=${cidade.nome}&estado=${cidade.estado}" class="btn btn-danger">EXCLUIR</a>
 							</div>
 						</td>
 					</tr>
