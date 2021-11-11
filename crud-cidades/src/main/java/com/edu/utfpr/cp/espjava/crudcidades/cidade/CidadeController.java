@@ -1,15 +1,17 @@
 package com.edu.utfpr.cp.espjava.crudcidades.cidade;
 
-import java.util.HashSet;
-import java.util.Set;
 import java.util.stream.Collectors;
+
 import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+
+import com.edu.utfpr.cp.espjava.crudcidades.persistencia.CidadeRepository;
 
 @Controller
 public class CidadeController {
@@ -62,7 +64,7 @@ public class CidadeController {
 
 	@GetMapping("/excluir")
 	public String excluir(
-			@RequestParam String nome, 
+			@RequestParam String nome,
 			@RequestParam String estado) {
 
 		var cidadeEstadoEncontrada =
