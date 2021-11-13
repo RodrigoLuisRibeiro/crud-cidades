@@ -26,4 +26,5 @@
     <fullyQualifiedTypeName name="java.util.stream.Collector"/>
     <fullyQualifiedTypeName name="java.util.stream.Collectors"/>
     <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.edu.utfpr.cp.espjava.crudcidades.cidade.CidadeEntidade"/>
 </qualifiedTypeNameHistroy>
