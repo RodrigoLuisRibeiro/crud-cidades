@@ -9,12 +9,12 @@ import javax.persistence.Id;
 
 @Entity (name = "cidade")
 public class CidadeEntidade implements Serializable{
-	
+
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private String nome;
 	private String estado;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -33,5 +33,5 @@ public class CidadeEntidade implements Serializable{
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
-	
+
 }

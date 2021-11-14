@@ -52,7 +52,7 @@ public class CidadeController {
 
 			return ("/crud");
 		} else {
-			
+
 			repository.save(cidade.clonar());
 		}
 

@@ -24,8 +24,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		.password(cifrador().encode("teste123"))
 		.authorities("admin");
 	}
-	
-	
+
+
+	@Override
 	protected void configure(HttpSecurity http) throws Exception{
 		http
 			.csrf().disable()
@@ -39,7 +40,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 			.and()
 			.formLogin().permitAll();
 	}
-	
+
 	@Bean
 	public PasswordEncoder cifrador() {
 		return new BCryptPasswordEncoder();
