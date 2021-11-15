@@ -1,7 +1,9 @@
 package com.edu.utfpr.cp.espjava.crudcidades.cidade;
 
+import java.security.Principal;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
@@ -23,7 +25,7 @@ public class CidadeController {
 	}
 
 	@GetMapping("/")
-	public String listar(Model memoria) {
+	public String listar(Model memoria, Principal usuario, HttpSession sessao) {
 
 		memoria.addAttribute("listaCidades", repository
 												.findAll()
@@ -33,6 +35,8 @@ public class CidadeController {
 														cidade.getEstado()))
 												.collect(Collectors.toList()));
 
+		sessao.setAttribute("usuarioAtual", usuario.getName());
+		
 		return "/crud";
 	}
 

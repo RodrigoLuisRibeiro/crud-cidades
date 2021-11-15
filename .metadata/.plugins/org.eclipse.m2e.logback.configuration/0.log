@@ -1702,3 +1702,32 @@
 2021-11-15 07:46:08,312 [Worker-81: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-11-15 07:46:08,312 [Worker-81: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-11-15 07:46:08,312 [Worker-81: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UTFPR_JAVA\JavaWeb\Projetos\CRUD-City\crud-cidades\src\test\resources
+2021-11-15 08:59:25,034 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2021-11-15 09:29:32,107 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:29:32,107 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:29:32,110 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-11-15 09:29:32,133 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 5 resources
+2021-11-15 09:29:32,137 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:29:32,137 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:29:32,137 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UTFPR_JAVA\JavaWeb\Projetos\CRUD-City\crud-cidades\src\test\resources
+2021-11-15 09:32:49,694 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:32:49,694 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:32:49,699 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-11-15 09:32:49,725 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2021-11-15 09:32:49,731 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:32:49,731 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:32:49,731 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UTFPR_JAVA\JavaWeb\Projetos\CRUD-City\crud-cidades\src\test\resources
+2021-11-15 09:34:11,053 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:34:11,054 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:34:11,055 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-11-15 09:34:11,061 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2021-11-15 09:34:11,065 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:34:11,065 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:34:11,065 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UTFPR_JAVA\JavaWeb\Projetos\CRUD-City\crud-cidades\src\test\resources
+2021-11-15 09:34:38,792 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:34:38,792 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:34:38,793 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2021-11-15 09:34:38,799 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 6 resources
+2021-11-15 09:34:38,803 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2021-11-15 09:34:38,803 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
+2021-11-15 09:34:38,803 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\UTFPR_JAVA\JavaWeb\Projetos\CRUD-City\crud-cidades\src\test\resources
