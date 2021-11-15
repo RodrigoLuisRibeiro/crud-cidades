@@ -4,6 +4,7 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.event.EventListener;
+import org.springframework.security.authentication.event.InteractiveAuthenticationSuccessEvent;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -14,19 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 @EnableWebSecurity
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
-//	@Override
-//	protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-//		auth.inMemoryAuthentication()
-//		.withUser("John")
-//		.password(cifrador().encode("teste123"))
-//		.authorities("listar")
-//		.and()
-//		.withUser("Rodrigo")
-//		.password(cifrador().encode("teste123"))
-//		.authorities("admin");
-//	} /* Agora está no banco */
-
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception{
@@ -51,5 +39,13 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@EventListener(ApplicationReadyEvent.class)
 	public void printSenhas() {
 		System.out.println(this.cifrador().encode("teste123"));
+	}
+	
+	@EventListener(InteractiveAuthenticationSuccessEvent.class)
+	public void printUsusarioAtual(InteractiveAuthenticationSuccessEvent event) {
+		
+		var usuario = event.getAuthentication().getName();
+		
+		System.out.println(usuario);
 	}
 }
