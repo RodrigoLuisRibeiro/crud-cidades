@@ -1,0 +1,6 @@
+INSERT INTO `usuario` VALUES (1, 'Rodrigo','$2a$10$5K7zEw9Ju155LWn6QXLs/OVLcZUre/O5lsNdA0ULNk5zKfrhhVTOm');
+INSERT INTO `usuario` VALUES (2, 'anna','$2a$10$5K7zEw9Ju155LWn6QXLs/OVLcZUre/O5lsNdA0ULNk5zKfrhhVTOm');
+
+INSERT INTO `usuario_papeis` VALUES (1, 'listar');
+INSERT INTO `usuario_papeis` VALUES (2, 'listar');
+INSERT INTO `usuario_papeis` VALUES (2, 'admin');

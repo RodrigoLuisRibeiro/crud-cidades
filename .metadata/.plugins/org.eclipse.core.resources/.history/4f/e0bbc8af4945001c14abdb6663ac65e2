@@ -1,0 +1,5 @@
+package com.edu.utfpr.cp.crudcidades.usuario;
+
+public class UsuarioDetailsService {
+
+}
