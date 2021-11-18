@@ -1,3 +1,4 @@
+
 INSERT INTO `usuario` VALUES (1, 'Rodrigo','$2a$10$5K7zEw9Ju155LWn6QXLs/OVLcZUre/O5lsNdA0ULNk5zKfrhhVTOm');
 INSERT INTO `usuario` VALUES (2, 'anna','$2a$10$5K7zEw9Ju155LWn6QXLs/OVLcZUre/O5lsNdA0ULNk5zKfrhhVTOm');
 

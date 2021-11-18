@@ -1,17 +1,22 @@
 package com.edu.utfpr.cp.espjava.crudcidades.cidade;
 
 import java.security.Principal;
+import java.time.LocalDateTime;
 import java.util.stream.Collectors;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.edu.utfpr.cp.espjava.crudcidades.persistencia.CidadeRepository;
 
@@ -25,7 +30,13 @@ public class CidadeController {
 	}
 
 	@GetMapping("/")
-	public String listar(Model memoria, Principal usuario, HttpSession sessao) {
+	public String listar(
+			Model memoria, 
+			Principal usuario, 
+			HttpSession sessao,
+			HttpServletResponse response) {
+		
+		response.addCookie(new Cookie("listar", LocalDateTime.now().toString()));
 
 		memoria.addAttribute("listaCidades", repository
 												.findAll()
@@ -41,7 +52,13 @@ public class CidadeController {
 	}
 
 	@PostMapping("/criar")
-	public String criar(@Valid Cidade cidade, BindingResult validacao, Model memoria) {
+	public String criar(
+			@Valid Cidade cidade, 
+			BindingResult validacao, 
+			Model memoria,
+			HttpServletResponse response) {
+		
+		response.addCookie(new Cookie("criar", LocalDateTime.now().toString()));
 
 		if (validacao.hasErrors()) {
 			validacao.getFieldErrors()
@@ -66,7 +83,10 @@ public class CidadeController {
 	@GetMapping("/excluir")
 	public String excluir(
 			@RequestParam String nome,
-			@RequestParam String estado) {
+			@RequestParam String estado,
+			HttpServletResponse response) {
+		
+		response.addCookie(new Cookie("excluir", LocalDateTime.now().toString()));
 
 		var cidadeEstadoEncontrada =
 				repository.findByNomeAndEstado(nome, estado);
@@ -94,7 +114,10 @@ public class CidadeController {
 	public String alterar(
 			@RequestParam String nomeAtual,
 			@RequestParam String estadoAtual,
-			Cidade cidade) {
+			Cidade cidade,
+			HttpServletResponse response) {
+		
+		response.addCookie(new Cookie("alterar", LocalDateTime.now().toString()));
 
 	var cidadeAtual = repository.findByNomeAndEstado(nomeAtual, estadoAtual);
 
@@ -107,5 +130,11 @@ public class CidadeController {
 	}
 
 		return "redirect:/";
+	}
+	
+	@GetMapping("/mostrar")
+	@ResponseBody
+	public String mostrarCookieAlterar(@CookieValue String listar) {
+		return "Último acesso ao método listar(): " + listar;
 	}
 }
