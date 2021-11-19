@@ -2,6 +2,7 @@ package com.edu.utfpr.cp.espjava.crudcidades.cidade;
 
 import java.security.Principal;
 import java.time.LocalDateTime;
+import java.util.List;
 import java.util.stream.Collectors;
 
 import javax.servlet.http.Cookie;
@@ -25,7 +26,7 @@ public class CidadeController {
 
 	private final CidadeRepository repository;
 
-	public CidadeController(CidadeRepository repository) {
+	public CidadeController(final CidadeRepository repository) {
 		this.repository = repository;
 	}
 
@@ -38,17 +39,19 @@ public class CidadeController {
 		
 		response.addCookie(new Cookie("listar", LocalDateTime.now().toString()));
 
-		memoria.addAttribute("listaCidades", repository
-												.findAll()
-												.stream()
-												.map(cidade -> new Cidade(
-														cidade.getNome(),
-														cidade.getEstado()))
-												.collect(Collectors.toList()));
+		memoria.addAttribute("listaCidades", this.converteCidade(repository.findAll()));
 
 		sessao.setAttribute("usuarioAtual", usuario.getName());
 		
 		return "/crud";
+	}
+	
+	private List<Cidade> converteCidade(List<CidadeEntidade> cidades){
+		return cidades.stream()
+				.map(cidade -> new Cidade(
+						cidade.getNome(),
+						cidade.getEstado()))
+				.collect(Collectors.toList());
 	}
 
 	@PostMapping("/criar")
@@ -69,7 +72,7 @@ public class CidadeController {
 
 			memoria.addAttribute("nomeInformado", cidade.getNome());
 			memoria.addAttribute("estadoInformado", cidade.getEstado());
-			memoria.addAttribute("listaCidades", repository.findAll());
+			memoria.addAttribute("listaCidades", this.converteCidade(repository.findAll()));
 
 			return ("/crud");
 		} else {
